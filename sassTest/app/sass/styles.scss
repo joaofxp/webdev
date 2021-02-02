@@ -1,0 +1,155 @@
+// use/import
+@use 'base';
+
+.inverse {
+    background-color: base.$primary-color;
+    color: white;
+}
+
+//nesting
+
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+    }
+}
+
+// using BEM
+
+.nav {
+    &:hover {
+        background-color: #fff;
+    }
+
+    &__ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__li {
+        display: inline-block;
+    }
+
+    &__a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+    }
+}
+
+// using BEM
+
+// Mixins
+
+@mixin potatoe($backgroundColor, $borderColor) {
+    background-color: $backgroundColor;
+    border: 2px solid $borderColor;
+    display: block;
+}
+
+.brown-potatoe {
+    @include potatoe(yellowgreen, #000);
+}
+
+//Extend/Inheritance just like a class
+/* This CSS will print because %message-shared is extended. */
+%message-shared {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+}
+
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.message {
+    @extend %message-shared;
+}
+
+.success {
+    @extend %message-shared;
+    border-color: green;
+}
+
+.error {
+    @extend %message-shared;
+    border-color: red;
+}
+
+.warning {
+    @extend %message-shared;
+    border-color: yellow;
+}
+
+//Operators
+.container {
+    width: 100%;
+}
+
+article[role="main"] {
+    float: left;
+    width: 600px / 960px * 100%;
+}
+
+aside[role="complementary"] {
+    float: right;
+    width: 300px / 960px * 100%;
+}
+
+//Flow Control
+
+$light-background: #f2ece4;
+$light-text: #036;
+$dark-background: #6b717f;
+$dark-text: #d2e1dd;
+
+@mixin theme-colors($light-theme: true) {
+    @if $light-theme {
+        background-color: $light-background;
+        color: $light-text;
+    } @else {
+        background-color: $dark-background;
+        color: $dark-text;
+    }
+}
+
+.banner {
+    @include theme-colors($light-theme: true);
+    body.dark & {
+        @include theme-colors($light-theme: false);
+    }
+}
+
+//for
+$base-color: #036;
+
+@for $i from 1 through 3 {
+    ul:nth-child(3n + #{$i}) {
+        background-color: lighten($base-color, $i * 5%);
+    }
+}
+
+//media
+$layout-breakpoint-small: 960px;
+
+@media (min-width: $layout-breakpoint-small) {
+    .hide-extra-small {
+        display: none;
+    }
+}

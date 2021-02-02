@@ -2,54 +2,55 @@
 <html lang="en">
 
 <head>
-    <title>Css Variables Changing Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Css Variables Changing Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 </head>
 
 <body>
 
-    <a href="#" id="btn-custom">
-        Hello Custom Btn
-    </a>
+	<a href="#" id="btn-custom">
+		Hello Custom Btn
+	</a>
 
-    <br>
-    <br>
+	<br>
+	<br>
 
-    <button onclick="changeColor('btn-custom-type-a')">
-        Change to custom type A
-    </button>
+	<button onclick="changeColor('btn-custom-type-a')">
+		Change to custom type A
+	</button>
 
-    <button onclick="changeColor('btn-custom-type-b')">
-        Change to custom type B
-    </button>
+	<button onclick="changeColor('btn-custom-type-b')">
+		Change to custom type B
+	</button>
 
-    <br>
-    <br>
+	<br>
+	<br>
 
 
-    <button onclick="changeColor('btn-initial')">
-        Change to initial
-    </button>
+	<button onclick="changeColor('btn-initial')">
+		Change to initial
+	</button>
 
-    <style>
-        :root {
-            --btn-initial: yellow;
-            --btn-custom-type-a: red;
-            --btn-custom-type-b: blue;
-        }
+	<style>
+		:root {
+			--btn-initial: yellow;
+			--btn-custom-type-a: red;
+			--btn-custom-type-b: blue;
+			--testVar: 960px;
+		}
 
-        #btn-custom {
-            background-color: var(--btn-initial);
-        }
-    </style>
+		#btn-custom {
+			background-color: var(--btn-initial);
+		}
+	</style>
 
-    <script>
-        changeColor = (color) => {
-            document.getElementById("btn-custom").style.backgroundColor = "var(--" + color + ")";
-        }
-    </script>
+	<script>
+		changeColor = (color) => {
+			document.getElementById("btn-custom").style.backgroundColor = "var(--" + color + ")";
+		}
+	</script>
 </body>
 
 </html>

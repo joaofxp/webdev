@@ -1,0 +1,108 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+
+.inverse {
+  background-color: #333;
+  color: white;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.nav:hover {
+  background-color: #fff;
+}
+.nav__ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav__li {
+  display: inline-block;
+}
+.nav__a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.brown-potatoe {
+  background-color: yellowgreen;
+  border: 2px solid #000;
+  display: block;
+}
+
+/* This CSS will print because %message-shared is extended. */
+.warning, .error, .success, .message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+
+.container {
+  width: 100%;
+}
+
+article[role=main] {
+  float: left;
+  width: 62.5%;
+}
+
+aside[role=complementary] {
+  float: right;
+  width: 31.25%;
+}
+
+.banner {
+  background-color: #f2ece4;
+  color: #036;
+}
+body.dark .banner {
+  background-color: #6b717f;
+  color: #d2e1dd;
+}
+
+ul:nth-child(3n+1) {
+  background-color: #004080;
+}
+
+ul:nth-child(3n+2) {
+  background-color: #004d99;
+}
+
+ul:nth-child(3n+3) {
+  background-color: #0059b3;
+}
+
+@media (min-width: 960px) {
+  .hide-extra-small {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
