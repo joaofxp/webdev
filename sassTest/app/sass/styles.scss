@@ -4,6 +4,7 @@
 .inverse {
     background-color: base.$primary-color;
     color: white;
+    display: flex;
 }
 
 //nesting
@@ -16,7 +17,10 @@ nav {
     }
 
     li {
-        display: inline-block;
+        display: grid;
+        scrollbar-width: none;
+        visibility: hidden;
+        margin: 0;
     }
 
     a {
@@ -152,4 +156,13 @@ $layout-breakpoint-small: 960px;
     .hide-extra-small {
         display: none;
     }
+}
+
+//Trying to use Sass with Autoprefixer
+
+.example {
+    display: flex;
+    transition: all 0.5s;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
 }
