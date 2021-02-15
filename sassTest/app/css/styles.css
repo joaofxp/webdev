@@ -6,6 +6,7 @@ body {
 .inverse {
   background-color: #333;
   color: white;
+  display: flex;
 }
 
 nav ul {
@@ -14,7 +15,10 @@ nav ul {
   list-style: none;
 }
 nav li {
-  display: inline-block;
+  display: grid;
+  scrollbar-width: none;
+  visibility: hidden;
+  margin: 0;
 }
 nav a {
   display: block;
@@ -103,6 +107,12 @@ ul:nth-child(3n+3) {
   .hide-extra-small {
     display: none;
   }
+}
+.example {
+  display: flex;
+  transition: all 0.5s;
+  user-select: none;
+  background: linear-gradient(to bottom, white, black);
 }
 
 /*# sourceMappingURL=styles.css.map */
