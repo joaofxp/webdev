@@ -3,7 +3,8 @@
 
 const path = require("path");
 
-var BrotliPlugin = require("brotli-webpack-plugin");
+// var BrotliPlugin = require("brotli-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -28,9 +29,6 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({ template: "./src/index.html" }),
         new MiniCssExtractPlugin({ filename: "[name].css" }),
-        new BrotliPlugin({
-            asset: "[file].br",
-            test: /\.(js)$/,
-        }),
+        new CompressionPlugin(),
     ],
 };
