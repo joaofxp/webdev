@@ -1,0 +1,30 @@
+{
+    "name": "TypeScript-Babel-Starter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --watch",
+        "start:dev": "webpack serve --open"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "path": "^0.12.7"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.16",
+        "@babel/preset-env": "^7.12.16",
+        "@babel/preset-typescript": "^7.12.16",
+        "babel-loader": "^8.2.2",
+        "typescript": "^4.1.5",
+        "webpack": "^5.22.0",
+        "webpack-cli": "^4.5.0",
+        "webpack-dev-server": "^3.11.2"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions"
+    ]
+}
