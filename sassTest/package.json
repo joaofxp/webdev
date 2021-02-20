@@ -4,20 +4,20 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build:css": "npx sass app/sass/:app/css/ && npx postcss app/css/*.css --use autoprefixer -d build",
+        "build:css": "npx sass app/sass/:app/css/ && npx postcss app/css/*.css --use autoprefixer --use cssnano -d build",
         "watch:css": "npx sass --watch app/sass/:app/css/ --style compressed",
         "nodemon:sassWithAutoPrefixer": "npx nodemon -e scss --exec \"npm run build:css\""
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "dependencies": {
+    "dependencies": {},
+    "devDependencies": {
         "autoprefixer": "^10.2.4",
         "nodemon": "^2.0.7",
         "postcss": "^8.2.4",
-        "sass": "^1.32.6"
-    },
-    "devDependencies": {
+        "sass": "^1.32.6",
+        "cssnano": "^4.1.10",
         "postcss-cli": "^8.3.1"
     },
     "browserslist": [
