@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-testing-bd329": {
+      "hosting": {
+        "awesomeA": [
+          "angular-testing-bd329"
+        ]
+      }
+    }
+  }
+}
